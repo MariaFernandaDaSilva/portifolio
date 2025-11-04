@@ -1,0 +1,112 @@
+/* Definindo variáveis das cores padrão */
+:root {
+    --light_blue: rgb(65, 160, 235);
+    --blue: rgb(40, 125, 195);
+
+    --white: rgb(255, 255, 255);
+
+    --background_purple: rgb(225, 215, 240);
+    --purple: rgb(95, 30, 175);
+    --light_purple: rgb(140, 75, 220);
+
+    --dark_gray: rgb(20, 20, 20);
+}
+
+/* Definindo configurações padrões para todos os elementos da página */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    transition: all 0.5s;
+}
+
+/* Configurações para alinhamento no centro */
+.alignCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* A partir daqui começam as configurações do cabeçalho */
+
+/* Configurações do cabeçalho */
+header {
+    background-color: var(--purple);
+    height: 5rem;
+    padding: 1rem;
+}
+
+/* Configurações de nav dentro de Header */
+header nav {
+    gap: 1rem;
+}
+
+/* Configurações dos links dentro de navegação do Header */
+header nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* Configurações de hover dos links em nav */
+header nav a:hover {
+    background-color: var(--light_purple);
+}
+
+/* Configurações do botão de menu hamburguer */
+#hamburgerMenuButton {
+    background-color: transparent;
+    border: none;
+    padding: 0.3rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Configurações do ícone do botão do menu hamburger */
+#hamburgerMenuButton .icon {
+    color: var(--white);
+}
+
+/* A partir daqui começam as configurações do main */
+
+/* Configurações padrão para todos os sections */
+section {
+    padding: 2rem;
+    height: 90vh;
+    background-color: var(--background_purple);
+}
+
+/* Configurações da seção de profile */
+#profile{
+    height: 80vh;
+}
+
+/* Configurações da foto de perfil*/
+.profilePhoto{
+    border: red 2px solid;
+}
+
+/* A partir daqui contém as configurações de responsividade */
+
+/* Para dispositivos de até 650px */
+@media (max-width: 650px) {
+
+    /* Configurações de nav */
+    .hideMenu {
+        display: none;
+    }
+
+    /* Configurações do botão de menu hamburguer */
+    #hamburgerMenuButton {
+        display: flex;
+    }
+
+    /* Configurações do header para mobile */
+    .mobileHeader {
+        justify-content: flex-end;
+    }
+
+}
