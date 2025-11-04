@@ -1,12 +1,17 @@
 /* Definindo variáveis das cores padrão */
 :root {
     --light_blue: rgb(65, 160, 235);
-    --blue: rgb(40, 125, 195);
+    --dark_blue: rgb(10, 70, 115);
+    --blue: rgb(30, 90, 135);
+    --background_blue: rgb(240, 250, 255);
+    --line_blue: rgb(212, 227, 234);
+
 
     --white: rgb(255, 255, 255);
 
     --background_purple: rgb(225, 215, 240);
     --purple: rgb(95, 30, 175);
+    --dark_purple: rgb(50, 16, 114);
     --light_purple: rgb(140, 75, 220);
 
     --dark_gray: rgb(20, 20, 20);
@@ -17,22 +22,29 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     transition: all 0.5s;
+    color: var(--dark_gray);
 }
+
+/* A partir daqui começam as configurações de alinhamento */
 
 /* Configurações para alinhamento no centro */
 .alignCenter {
     display: flex;
-    align-items: center;
     justify-content: center;
+}
+
+/* Configurações de alinhamento em coluna */
+.columnAlign {
+    flex-direction: column;
 }
 
 /* A partir daqui começam as configurações do cabeçalho */
 
 /* Configurações do cabeçalho */
 header {
-    background-color: var(--purple);
+    background-color: var(--dark_blue);
     height: 5rem;
     padding: 1rem;
 }
@@ -53,7 +65,7 @@ header nav a {
 
 /* Configurações de hover dos links em nav */
 header nav a:hover {
-    background-color: var(--light_purple);
+    background-color: var(--blue);
 }
 
 /* Configurações do botão de menu hamburguer */
@@ -75,21 +87,107 @@ header nav a:hover {
 /* Configurações padrão para todos os sections */
 section {
     padding: 2rem;
-    height: 90vh;
-    background-color: var(--background_purple);
+    min-height: 90vh;
+    background-color: var(--background_blue);
 }
 
 /* Configurações da seção de profile */
-#profile{
-    height: 80vh;
+#profile {
+    min-height: 70vh;
+    padding: 5rem;
+    gap: 4rem;
+}
+
+/* Configurações da div de informações em profile */
+.profileInfo {
+    gap: 1rem;
+    /* align-items: flex-start; */
+    text-align: center;
+    justify-content: flex-start;
+}
+
+/* Configurações do nome e da descrição em profile */
+.profileInfo h1,
+.profileInfo p {
+    width: 100%;
+}
+
+/* Configurações da div de sobre mim */
+.aboutMe {
+    display: flex;
+    gap: 1.3rem;
+    text-align: justify;
+}
+
+/* Configurações do texto de ano */
+.year {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+/* Configurações da linha de separação */
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: var(--line_blue);
+    margin: 2rem 0;
+}
+
+/* Configurações de h2 */
+h2 {
+    margin-bottom: 0.5rem;
+}
+
+/* Configurações do h1 */
+h1 {
+    color: var(--blue);
 }
 
 /* Configurações da foto de perfil*/
-.profilePhoto{
-    border: red 2px solid;
+.profilePhoto {
+    aspect-ratio: 13 / 9;
+    width: 25rem;
+    object-fit: cover;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    box-shadow: -3px 3px var(--blue);
 }
 
 /* A partir daqui contém as configurações de responsividade */
+
+/* Para dispositivos de até 1000px */
+@media (max-width: 1000px) {
+
+    /* Configurações da seção de profile */
+    #profile {
+        padding: 5rem 3rem;
+        gap: 2rem;
+    }
+}
+
+/* Para dispositivos de até 900px */
+@media (max-width: 900px) {
+
+    /* Configurações da seção de profile */
+    #profile {
+        padding: 5rem 2rem;
+    }
+}
+
+/* Para dispositivos de até 700px */
+@media (max-width: 700px) {
+
+    /* Configurações da seção de profile */
+    #profile {
+        padding: 5rem 5rem;
+        flex-direction: column;
+    }
+
+    /* Configurações da foto de perfil*/
+    .profilePhoto {
+        width: 100%;
+    }
+}
 
 /* Para dispositivos de até 650px */
 @media (max-width: 650px) {
@@ -108,5 +206,33 @@ section {
     .mobileHeader {
         justify-content: flex-end;
     }
+
+}
+
+/* Para dispositivos de até 550px */
+@media (max-width: 550px) {
+
+    /* Configurações da seção de profile */
+    #profile {
+        padding: 3rem 2rem;
+        flex-direction: column;
+    }
+
+}
+
+/* Para dispositivos de até 550px */
+@media (max-width: 300px) {
+
+    /* Configurações do h1 */
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Configurações da seção de profile */
+    #profile {
+        padding: 2rem 1rem;
+        flex-direction: column;
+    }
+
 
 }
