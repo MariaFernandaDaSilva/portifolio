@@ -89,15 +89,17 @@ header nav a:hover {
 /* Configurações padrão para todos os sections */
 section {
   padding: 2rem;
-  min-height: 90vh;
+  min-height: 95vh;
   background-color: var(--background_blue);
 }
 
 /* Configurações da seção de profile */
 #profile {
-  min-height: 90vh;
+  /* min-height: 90vh; */
   padding: 5rem;
   gap: 4rem;
+  align-items: center;
+  position: relative;
 }
 
 /* Configurações da div que abriga o conteúdo da seção profile */
@@ -158,6 +160,29 @@ h1 {
   border: 1px solid grey;
   border-radius: 1rem;
   box-shadow: -3px 3px var(--blue);
+}
+
+/* A partir daqui, estarão as configurações do nextButton */
+
+/* Configurações de todos os botões */
+.nextButton{
+  position: absolute;
+  bottom: -2rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+/* Configurações do nextButton de Profile */
+#profileButton{
+  background-color: var(--background_blue);
+}
+
+/* Configurações do ícone de nextButton de Profile */
+#profileButton .icon{
+  color: var(--dark_blue);
 }
 
 /* A partir daqui contém as configurações de responsividade */
