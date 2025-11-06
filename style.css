@@ -88,22 +88,20 @@ header nav a:hover {
 
 /* Configurações padrão para todos os sections */
 section {
-  padding: 2rem;
+  padding: 5rem;
   min-height: 95vh;
-  background-color: var(--background_blue);
 }
 
 /* Configurações da seção de profile */
 #profile {
-  /* min-height: 90vh; */
-  padding: 5rem;
   gap: 4rem;
   align-items: center;
   position: relative;
+  background-color: var(--background_blue);
 }
 
 /* Configurações da div que abriga o conteúdo da seção profile */
-#profile > div {
+#profile>div {
   gap: 4rem;
 }
 
@@ -139,12 +137,13 @@ section {
   height: 1px;
   width: 100%;
   background-color: var(--line_blue);
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 /* Configurações de h2 */
 h2 {
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 /* Configurações do h1 */
@@ -165,7 +164,7 @@ h1 {
 /* A partir daqui, estarão as configurações do nextButton */
 
 /* Configurações de todos os botões */
-.nextButton{
+.nextButton {
   position: absolute;
   bottom: -2rem;
   height: 4rem;
@@ -176,27 +175,72 @@ h1 {
 }
 
 /* Configurações do nextButton de Profile */
-#profileButton{
+#profileButton {
   background-color: var(--background_blue);
 }
 
+#profileButton:hover {
+  box-shadow: 0px 0px 6px grey;
+}
+
 /* Configurações do ícone de nextButton de Profile */
-#profileButton .icon{
+#profileButton .icon {
   color: var(--dark_blue);
+}
+
+/* A partir daqui contém as configurações da seção de gostos */
+
+/* Configurações da seção de gostos */
+#likes>div {
+  gap: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+/* Configurações das divs de hobby */
+.hobby {
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px grey;
+  text-align: justify;
+}
+
+/* Configurações iniciais do hobby de leitura */
+#readHobby {
+  grid-column: 1 / 3;
+  width: 50%;
+  justify-self: center;
+}
+
+/* Configurações padrões dos ícones dentro de hobby */
+.hobbyIcon {
+  height: 6rem;
+  min-height: 6rem;
+  min-width: 6rem;
 }
 
 /* A partir daqui contém as configurações de responsividade */
 
 /* Para dispositivos de até 1500px */
 @media (max-width: 1500px) {
+
   /* Configurações da foto de perfil*/
   .profilePhoto {
     width: 30rem;
   }
 }
 
+/* Para dispositivos de até 1200px */
+@media (max-width: 1200px) {}
+
 /* Para dispositivos de até 1100px */
 @media (max-width: 1100px) {
+
   /* Configurações da foto de perfil*/
   .profilePhoto {
     width: 25rem;
@@ -205,34 +249,57 @@ h1 {
 
 /* Para dispositivos de até 1000px */
 @media (max-width: 1000px) {
-  /* Configurações da seção de profile */
-  #profile {
+
+  /* Configurações padrões das seções */
+  section {
     padding: 5rem 3rem;
   }
 
   /* Configurações do coonteúdo da seção de profile */
-  #profile > div {
+  #profile>div {
     gap: 2rem;
+  }
+
+  /* Configurações da seção de gostos */
+  #likes>div {
+    gap: 1rem;
   }
 }
 
 /* Para dispositivos de até 900px */
 @media (max-width: 900px) {
-  /* Configurações da seção de profile */
-  #profile {
+
+  /* Configurações padrões das seções */
+  section {
     padding: 5rem 2rem;
+  }
+}
+
+/* Para dispositivos de até 800px */
+@media (max-width: 800px) {
+
+  /* Configurações da seção de gostos */
+  #likes>div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Configurações iniciais do hobby de leitura */
+  #readHobby {
+    width: 100%;
   }
 }
 
 /* Para dispositivos de até 700px */
 @media (max-width: 700px) {
-  /* Configurações da seção de profile */
-  #profile {
+
+  /* Configurações padrões das seções */
+  section {
     padding: 5rem 5rem;
   }
 
   /* Configurações do coonteúdo da seção de profile */
-  #profile > div {
+  #profile>div {
     flex-direction: column;
   }
 
@@ -244,6 +311,7 @@ h1 {
 
 /* Para dispositivos de até 650px */
 @media (max-width: 650px) {
+
   /* Configurações do cabeçalho */
   header {
     align-items: center;
@@ -267,23 +335,34 @@ h1 {
 
 /* Para dispositivos de até 550px */
 @media (max-width: 550px) {
-  /* Configurações da seção de profile */
-  #profile {
+
+  /* Configurações padrões das seções */
+  section {
     padding: 3rem 2rem;
+    flex-direction: column;
+  }
+
+  /* Configurações das divs de hobby */
+  .hobby {
     flex-direction: column;
   }
 }
 
 /* Para dispositivos de até 550px */
 @media (max-width: 300px) {
+
   /* Configurações do h1 */
   h1 {
     font-size: 24px;
   }
 
+  /* Configurações padrões das seções */
+  section {
+    padding: 2rem 1rem;
+  }
+
   /* Configurações da seção de profile */
   #profile {
-    padding: 2rem 1rem;
     flex-direction: column;
   }
 }
