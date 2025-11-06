@@ -179,7 +179,8 @@ h1 {
   background-color: var(--background_blue);
 }
 
-#profileButton:hover {
+/* Configurações do hover de nextButton */
+.nextButton:hover {
   box-shadow: 0px 0px 6px grey;
 }
 
@@ -189,6 +190,16 @@ h1 {
 }
 
 /* A partir daqui contém as configurações da seção de gostos */
+
+/* Configurações da seção de gostos */
+#likes {
+  position: relative;
+}
+
+/* Configurações do título da seção Gostos */
+#likes h2 {
+  margin: 1.5rem;
+}
 
 /* Configurações da seção de gostos */
 #likes>div {
@@ -206,7 +217,8 @@ h1 {
   gap: 1rem;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 0 5px grey;
+  border: 1px var(--dark_purple) solid;
+  box-shadow: -2px 2px 0 var(--dark_purple);
   text-align: justify;
 }
 
@@ -215,6 +227,7 @@ h1 {
   grid-column: 1 / 3;
   width: 50%;
   justify-self: center;
+  transition: none;
 }
 
 /* Configurações padrões dos ícones dentro de hobby */
@@ -223,6 +236,76 @@ h1 {
   min-height: 6rem;
   min-width: 6rem;
 }
+
+/* Configurações do botão da seção de gostos */
+#likesButton {
+  align-self: center;
+  background-color: var(--white);
+}
+
+/* Configurações do ícone dentro do botão */
+#likesButton .icon {
+  color: var(--dark_purple);
+}
+
+/* A partir daqui contém as configurações da seção de experiências */
+
+/* Configurações da seção de experiências */
+#experiences {
+  background-color: var(--background_blue);
+}
+
+/* Div que abriga os cards */
+#experiences>div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Configurações de card com imagem */
+.card {
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: justify;
+  background-color: var(--white);
+}
+
+/* Configurações do hover dos cards */
+.card:hover {
+  box-shadow: -2px 2px 5px grey;
+  cursor: pointer;
+}
+
+/* Configurações padrões da imagem do card */
+.imageCard {
+  border: red 1px solid;
+  height: 14rem;
+  border-radius: 0.7rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Configurações para conhecer os projetos */
+.findHere {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Configurações dos ícones dos links */
+.findHere .icon {
+  color: var(--dark_blue);
+}
+
+/* Configurações do hover dos links */
+.findHere .icon:hover {
+  color: var(--blue);
+  transform: scale(105%);
+}
+
 
 /* A partir daqui contém as configurações de responsividade */
 
@@ -245,6 +328,13 @@ h1 {
   .profilePhoto {
     width: 25rem;
   }
+
+  /* Div que abriga os cards */
+  #experiences>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
 }
 
 /* Para dispositivos de até 1000px */
@@ -263,6 +353,11 @@ h1 {
   /* Configurações da seção de gostos */
   #likes>div {
     gap: 1rem;
+  }
+
+  /* Div que abriga os cards */
+  #experiences>div {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -306,6 +401,11 @@ h1 {
   /* Configurações da foto de perfil*/
   .profilePhoto {
     width: 100%;
+  }
+
+  /* Div que abriga os cards */
+  #experiences>div {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -365,4 +465,11 @@ h1 {
   #profile {
     flex-direction: column;
   }
+
+  /* Configurações para conhecer os projetos */
+  .findHere {
+    gap: 0.2rem;
+    flex-wrap: wrap;
+  }
+
 }
