@@ -582,7 +582,6 @@ section>p {
 /* Configurações do hover dos cards */
 .card:hover {
   box-shadow: -2px 2px 5px grey;
-  cursor: pointer;
 }
 
 /* Configurações padrões da imagem do card */
