@@ -82,19 +82,69 @@ const dots = document.querySelectorAll('.dot-nav a');
 const sections = document.querySelectorAll('section');
 
 // Atualiza dot ativo ao rolar
+
+// Adiciona um "ouvinte" (listener) para o evento de rolagem da janela
+// Ou seja, toda vez que o usuário rolar a página, essa função será executada.
 window.addEventListener('scroll', () => {
+    
+    // Variável para armazenar o id da seção atual visível na tela
     let current = '';
+    
+    // Percorre todas as seções da página
     sections.forEach(section => {
+        // Pega a distância (em pixels) entre o topo da seção e o topo da página
         const sectionTop = section.offsetTop;
+        
+        // Verifica se a rolagem atual (pageYOffset) é maior que o topo da seção
+        // menos metade da altura da janela.
+        // Isso significa que a seção entrou aproximadamente no meio da tela.
         if (pageYOffset >= sectionTop - window.innerHeight / 2) {
+            // Atualiza a variável 'current' com o id da seção atual
             current = section.getAttribute('id');
         }
     });
 
+    // Percorre todos os "pontos" (dots) do menu de navegação lateral ou superior
     dots.forEach(dot => {
+        // Remove a classe 'active' de todos os dots
         dot.classList.remove('active');
+        
+        // Se o href do dot corresponde à seção atual (por exemplo, "#sobre"),
+        // adiciona a classe 'active' para destacar esse dot.
         if (dot.getAttribute('href') === `#${current}`) {
             dot.classList.add('active');
         }
     });
 });
+
+
+// Seleciona todos os elementos com a classe .animar
+const elementos = document.querySelectorAll('.animar');
+
+// Cria um novo observador (IntersectionObserver)
+// Ele vai "observar" quando os elementos entram ou saem da área visível da janela (viewport)
+const observer = new IntersectionObserver((entradas) => {
+  
+  // 'entradas' é um array de objetos, cada um representando um elemento observado
+  entradas.forEach((entrada) => {
+    
+    // Verifica se o elemento está visível (intersectando com a viewport)
+    if (entrada.isIntersecting) {
+      // Adiciona a classe 'ativo' — normalmente usada para iniciar uma animação CSS
+      entrada.target.classList.add('ativo');
+    } else {
+      // Remove a classe 'ativo' quando o elemento sai da área visível
+      // (isso é opcional — se quiser que a animação aconteça só uma vez, pode remover essa linha)
+      entrada.target.classList.remove('ativo');
+    }
+  });
+  
+}, {
+  // Opções do observador:
+  // threshold: define quanto do elemento precisa estar visível para considerar "intersectando"
+  threshold: 0.2 // aqui: 20% visível já ativa
+});
+
+// Faz o observador observar cada elemento selecionado
+elementos.forEach(el => observer.observe(el));
+

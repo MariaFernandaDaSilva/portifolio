@@ -131,6 +131,11 @@ section {
   position: relative;
 }
 
+/* Condifgurações para textos azuis */
+.blueText{
+  color: var(--dark_blue);
+} 
+
 /* Configurações da div que abriga o conteúdo da seção profile */
 #profile>div {
   gap: 4rem;
@@ -720,6 +725,19 @@ section>p {
   background: var(--dark_purple);
   transform: scale(1.3);
   border-color: var(--white);
+}
+
+/* Estado inicial dos elementos animáveis */
+.animar {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+/* Estado final quando a classe "ativo" é adicionada */
+.animar.ativo {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* A partir daqui contém as configurações de responsividade */

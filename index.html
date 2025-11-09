@@ -74,23 +74,23 @@
                     <!-- Div que abriga subtítulo + título + resumo sobre mim + Principais habilidades -->
                     <div>
                         <!-- Título -->
-                        <h2>Estudante de Sistemas Para Internet</h2>
+                        <h2 class="animar">Estudante de Sistemas Para Internet</h2>
 
                         <!-- Nome -->
-                        <h1>Maria Fernanda da Silva</h1>
+                        <h1 class="animar">Maria Fernanda da Silva</h1>
 
                         <!-- Falando um pouco sobre mim -->
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio repudiandae, eaque assumenda
-                            quaerat qui, sequi eos minus nemo quos voluptatum omnis voluptatibus esse doloribus aliquam
-                            hic
-                            numquam. Architecto, distinctio adipisci?Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Voluptas nesciunt hic quia exercitationem iusto suscipit praesentium id. Recusandae
-                            repellendus commodi, modi ad accusamus itaque voluptatem repudiandae, porro alias quos
-                            pariatur.
+                        <p class="animar">Olá! <span class="bold">Meu nome é Maria Fernanda da Silva, tenho 19 anos, moro em Matão - SP
+                                e curso Sistemas para Internet na FATEC Taquaritinga</span>. Sou apaixonada por todas as
+                            áreas do desenvolvimento e sempre tive uma conexão natural com a tecnologia desde muito
+                            jovem. É uma grande honra estar aqui hoje, participando do processo seletivo de uma empresa
+                            que sempre esteve presente na minha vida por meio do meu pai e que tem um papel tão
+                            importante na indústria aeronáutica e na representação do nosso país: a <span
+                                class="bold blueText">Embraer</span>.
                         </p>
 
                         <!-- Principais habilidades / Prévia das habilidades -->
-                        <div class="skillsPreview">
+                        <div class="skillsPreview animar">
 
                             <!-- Habilidade HTML -->
                             <i class="fa-brands fa-html5 fa-2x icon" id="htmlIcon" title="HTML"></i>
@@ -112,7 +112,7 @@
                 </div>
 
                 <!-- Foto -->
-                <div class="profilePhoto"></div>
+                <div class="profilePhoto animar" ></div>
             </div>
 
             <!-- Botão que leva para a próxima seção -->
@@ -126,18 +126,16 @@
         <!-- Seção de gostos -->
         <section id="likes" class="alignCenter columnAlign">
 
-            <h2>Sobre mim</h2>
+            <h2 class="animar">Sobre mim</h2>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est tempore aspernatur nostrum enim porro minus
-                autem at ipsa, vitae optio consectetur aut pariatur ipsam similique voluptatem labore reprehenderit
-                molestias eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat illo, nam ullam tempora
-                reiciendis, voluptates eaque tempore perspiciatis a distinctio dolorem odit explicabo suscipit atque rem
-                ab alias dolorum nisi.</p>
+            <p class="animar">Eu sou uma pessoa muito ansiosa, então sempre procuro atividades que me ajudem a manter a calma e a
+                organizar meus pensamentos. Gosto de fazer <span class="bold">crochê</span>, <span class="bold">correr</span> — algo que comecei recentemente e tem sido
+                ótimo para a minha saúde — e também de <span class="bold">ler</span>.</p>
 
             <!-- Div que abriga o conteúdo da classe -->
             <div class="alignCenter">
                 <!-- Div padrão para hobby - Crochê -->
-                <div class="hobby alignCenter">
+                <div class="hobby alignCenter animar">
 
                     <!-- Ícone da linha de crochet -->
                     <svg class="hobbyIcon" id="crochetIcon" viewBox="0 0 474.635 474.635"
@@ -154,7 +152,7 @@
                 </div>
 
                 <!-- Div padrão para hobby - Correr -->
-                <div class="hobby alignCenter">
+                <div class="hobby alignCenter animar">
 
                     <!-- Ícone de corrida -->
                     <svg viewBox="0 0 24 24" fill="none" class="hobbyIcon" id="runIcon">
@@ -178,7 +176,7 @@
                 </div>
 
                 <!-- Div padrão para hobby - Ler -->
-                <div class="hobby alignCenter">
+                <div class="hobby alignCenter animar">
                     <!-- Ícone de livro -->
                     <svg viewBox="0 0 24 24" fill="none" class="hobbyIcon" id="bookIcon">
                         <path
@@ -210,13 +208,13 @@
         <section id="skills" class="alignCenter columnAlign">
 
             <!-- Título da seção -->
-            <h2>Habilidades</h2>
+            <h2 class="animar">Habilidades</h2>
 
             <!-- Texto da seção -->
-            <p>Principais habilidades desenvolvidas ao longo da minha trajetória.</p>
+            <p class="animar">Principais habilidades desenvolvidas ao longo da minha trajetória.</p>
 
             <!-- Grade de habilidades -->
-            <div class="skillsGrid">
+            <div class="skillsGrid animar">
 
                 <!-- Div padrão habilidade - HTML -->
                 <div class="skill" id="htmlSkill">
@@ -511,12 +509,12 @@
         <!-- Seção de experiências -->
         <section id="experiences" class="alignCenter columnAlign">
             <!-- Título da seção -->
-            <h2>Projetos</h2>
+            <h2 class="animar">Projetos</h2>
 
-            <p>Confira alguns dos projetos que desenvolvi ao longo da minha trajetória:</p>
+            <p class="animar">Confira alguns dos projetos que desenvolvi ao longo da minha trajetória:</p>
 
             <!-- Div que abriga os cards -->
-            <div>
+            <div class="animar">
                 <!-- Div padrão dos cards com Imagem -->
                 <div class="card" id="pcCard">
 
@@ -568,16 +566,20 @@
                     <h3>Análise e Visualização de Vendas Mensais</h3>
 
                     <!-- Texto do card -->
-                    <p>O código em <span class="bold">Python</span> organiza e analisa dados de vendas de dois serviços ao longo de seis meses.
-                        Ele cria uma tabela com o <span class="bold">Pandas</span>, calcula o total de vendas mensais, gera estatísticas básicas
-                        (média e máximo) e exibe um gráfico de barras com <span class="bold">Matplotlib</span> mostrando o desempenho de vendas de
+                    <p>O código em <span class="bold">Python</span> organiza e analisa dados de vendas de dois serviços
+                        ao longo de seis meses.
+                        Ele cria uma tabela com o <span class="bold">Pandas</span>, calcula o total de vendas mensais,
+                        gera estatísticas básicas
+                        (média e máximo) e exibe um gráfico de barras com <span class="bold">Matplotlib</span> mostrando
+                        o desempenho de vendas de
                         forma clara e visualmente informativa.</p>
 
                     <!-- Div que abriga links para o projeto -->
                     <div class="findHere">
 
                         <!-- Link para o Github do projeto-->
-                        <a href="https://github.com/MariaFernandaDaSilva/Dashboard_python" title="Conheça o repositório do projeto">
+                        <a href="https://github.com/MariaFernandaDaSilva/Dashboard_python"
+                            title="Conheça o repositório do projeto">
                             <!-- Ícone do GitHub -->
                             <i class="fa-brands fa-github fa-2x icon"></i>
                         </a>
@@ -595,13 +597,18 @@
                     <h3>Cadastro de ONGs</h3>
 
                     <!-- Texto do card -->
-                    <p>Este projeto é uma extensão do Patas Conscientes, desenvolvido em <span class="bold">Java com Spring Boot e JSP, integrando-se automaticamente a um banco MySQL</span>. Ele permite gerenciar ONGs com funcionalidades de adição, alteração e exclusão de registros de forma prática e segura. Desenvolvido em ambiente acadêmico, o projeto aplicou conceitos de CRUD, persistência de dados e interfaces web dinâmicas. </p>
+                    <p>Este projeto é uma extensão do Patas Conscientes, desenvolvido em <span class="bold">Java com
+                            Spring Boot e JSP, integrando-se automaticamente a um banco MySQL</span>. Ele permite
+                        gerenciar ONGs com funcionalidades de adição, alteração e exclusão de registros de forma prática
+                        e segura. Desenvolvido em ambiente acadêmico, o projeto aplicou conceitos de CRUD, persistência
+                        de dados e interfaces web dinâmicas. </p>
 
                     <!-- Div que abriga links para o projeto -->
                     <div class="findHere">
 
                         <!-- Link para o Github do projeto-->
-                        <a href="https://github.com/MariaFernandaDaSilva/Patas_Conscientes_Java" title="Conheça o repositório do projeto">
+                        <a href="https://github.com/MariaFernandaDaSilva/Patas_Conscientes_Java"
+                            title="Conheça o repositório do projeto">
                             <!-- Ícone do GitHub -->
                             <i class="fa-brands fa-github icon fa-2x icon"></i>
                         </a>
@@ -613,12 +620,12 @@
         <!-- Seção de experiências -->
         <section id="extracurricular" class="alignCenter columnAlign">
             <!-- Título da seção -->
-            <h2>Extracurriculares</h2>
+            <h2 class="animar">Extracurriculares</h2>
 
-            <p>Atividades que ampliaram minhas habilidades além da sala de aula.</p>
+            <p class="animar">Atividades que ampliaram minhas habilidades além da sala de aula.</p>
 
             <!-- Div que abriga os cards -->
-            <div>
+            <div class="animar">
                 <!-- Div padrão dos cards com Imagem -->
                 <div class="card" id="adaTechCard">
 
@@ -629,13 +636,17 @@
                     <h3>ADA TECH</h3>
 
                     <!-- Texto do card -->
-                    <p>O Ada Tech é um <span class="bold">grupo de pesquisa em STEM (Ciência, Tecnologia, Engenharia e Matemática) com foco em diversidade de gênero</span>. Nosso objetivo é incentivar a presença feminina na tecnologia. Nossa primeira ação foi uma palestra na FATEC Taquaritinga e um curso introdutório de desenvolvimento web para alunas do 3º ano do ensino médio. </p>
+                    <p>O Ada Tech é um <span class="bold">grupo de pesquisa em STEM (Ciência, Tecnologia, Engenharia e
+                            Matemática) com foco em diversidade de gênero</span>. Nosso objetivo é incentivar a presença
+                        feminina na tecnologia. Nossa primeira ação foi uma palestra na FATEC Taquaritinga e um curso
+                        introdutório de desenvolvimento web para alunas do 3º ano do ensino médio. </p>
 
                     <!-- Div que abriga links para o projeto -->
                     <div class="findHere">
 
                         <!-- Link para o instagram do projeto -->
-                        <a href="https://www.instagram.com/adatech.fatec?igsh=MXcydWdycnh0cmt3dw==" title="Conheça o instagram do grupo">
+                        <a href="https://www.instagram.com/adatech.fatec?igsh=MXcydWdycnh0cmt3dw=="
+                            title="Conheça o instagram do grupo">
                             <!-- Ícone do instagram -->
                             <i class="fa-brands fa-instagram fa-2x icon"></i>
                         </a>
@@ -652,13 +663,18 @@
                     <h3>INVICTUS FATEC TAQUARITINGA</h3>
 
                     <!-- Texto do card -->
-                    <p>A Invictus,  <span class="bold">atlética informal da Fatec Taquaritinga</span>, é responsável por promover integração, esporte e união entre os cursos da faculdade. Como secretária, atuo na organização dos Jogos de Interclasse, Interfatecs e atividades de integração entre turmas, além de colaborar na realização de eventos internos e ações de venda de massas e recursos para apoiar as formaturas.</p>
+                    <p>A Invictus, <span class="bold">atlética informal da Fatec Taquaritinga</span>, é responsável por
+                        promover integração, esporte e união entre os cursos da faculdade. Como secretária, atuo na
+                        organização dos Jogos de Interclasse, Interfatecs e atividades de integração entre turmas, além
+                        de colaborar na realização de eventos internos e ações de venda de massas e recursos para apoiar
+                        as formaturas.</p>
 
                     <!-- Div que abriga links para o projeto -->
                     <div class="findHere">
 
                         <!-- Link para o instagram do projeto -->
-                        <a href="https://www.instagram.com/invictus_fatectq?igsh=emYzOGg5MHpqcmY5" title="Conheça o instagram da atlética">
+                        <a href="https://www.instagram.com/invictus_fatectq?igsh=emYzOGg5MHpqcmY5"
+                            title="Conheça o instagram da atlética">
                             <!-- Ícone do instagram -->
                             <i class="fa-brands fa-instagram fa-2x icon"></i>
                         </a>
@@ -675,7 +691,9 @@
                     <h3>Patas Conscientes</h3>
 
                     <!-- Texto do card -->
-                    <p>O projeto Patas Conscientes participa ativamente de palestras e eventos de divulgação da Fatec Taquaritinga, levando visibilidade ao trabalho desenvolvido na instituição e promovendo o incentivo à adoção responsável de animais da região.</p>
+                    <p>O projeto Patas Conscientes participa ativamente de palestras e eventos de divulgação da Fatec
+                        Taquaritinga, levando visibilidade ao trabalho desenvolvido na instituição e promovendo o
+                        incentivo à adoção responsável de animais da região.</p>
 
                     <!-- Div que abriga links para o projeto -->
                     <div class="findHere">
@@ -693,32 +711,28 @@
         <!-- Seção de pilar de cultura -->
         <section id="culturePillar" class="alignCenter columnAlign">
             <!-- Título da seção -->
-            <h2>Pilares de cultura</h2>
+            <h2 class="animar">Pilares de cultura</h2>
 
             <!-- Texto -->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae et error blanditiis.</p>
+            <p class="animar">O pilar de cultura que eu mais me identifico é...</p>
 
             <!-- Div que revela o pilar -->
             <div class="alignCenter columnAlign">
                 <!-- Título -->
-                <h3>Título</h3>
+                <h3 class="pillar animar">Paixão por fazer a diferença.</h3>
 
                 <!-- Texto básico -->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo doloribus dolores adipisci. Assumenda
-                    excepturi aut unde id. Harum, fuga modi praesentium error non recusandae quos odio pariatur, fugiat
-                    ipsam incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolorem aliquid
-                    cupiditate corrupti quidem nam optio maiores nostrum exercitationem quod doloremque, esse quo
-                    corporis reiciendis ea nesciunt mollitia unde suscipit.</p>
+                <p class="animar">Esse pilar representa o desejo de causar impacto positivo nas pessoas e no ambiente ao nosso redor, valorizando cada oportunidade de aprender, compartilhar e crescer em conjunto. Fazer a diferença é sobre inspirar, apoiar e transformar — mesmo em pequenas ações. Esse valor esteve presente em experiências como o Ada Tech, onde tive a oportunidade de contribuir em um curso para meninas do ensino médio, e em projetos como a Invictus e o Patas Conscientes, que promovem integração, empatia e colaboração dentro da comunidade acadêmica.</p>
             </div>
         </section>
 
         <!-- Seção de despedida -->
         <section id="farewell" class="alignCenter columnAlign">
             <!-- Frase de finalização -->
-            <h2>TÍTULO</h2>
+            <h2 class="animar"></h2>
 
             <!-- Texto complementar -->
-            <p>Texto complementar</p>
+            <p class="animar">Não se preocupe com a distância entre seus sonhos e a realidade. Se você pode sonhá-los, você pode realizá-los.</p>
         </section>
 
         <!-- Barra lateral com links -->
