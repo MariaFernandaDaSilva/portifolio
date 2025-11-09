@@ -596,6 +596,30 @@ section>p {
   background-size: cover;
 }
 
+#pcCard .imageCard{
+  background-image: url(images/photo/adotar_patas.png);
+}
+
+#pyDashboardCard .imageCard{
+  background-image: url(images/photo/projeto_python.png);
+}
+
+#javaPcCard .imageCard{
+  background-image: url(images/photo/projeto_java.png);
+}
+
+#adaTechCard .imageCard{
+  background-image: url(images/photo/adatech.jpg);
+}
+
+#invictus .imageCard{
+  background-image: url(images/photo/invictus_logo.png);
+}
+
+#pcActivities .imageCard{
+  background-image: url(images/photo/patasconscientes_divulgacao.jpeg);
+}
+
 /* Configurações para conhecer os projetos */
 .findHere {
   margin-top: 1rem;
@@ -606,6 +630,11 @@ section>p {
 /* Configurações dos ícones dos links */
 .findHere .icon {
   color: var(--dark_purple);
+}
+
+/* Configurações do hover dos ícones dos links */
+.findHere .icon:hover {
+  color: var(--purple);
 }
 
 /* Configurações do hover dos links */
