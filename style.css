@@ -146,9 +146,14 @@ section {
 /* Configurações de h2 dentro de .aboutMe */
 .aboutMe h2 {
   margin: 0;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 600;
   text-align: left;
+}
+
+/* Configurações de h1 dentro de .aboutMe */
+.aboutMe h1 {
+  font-size: 40px;
 }
 
 /* Configurações de p dentro de .aboutMe */
@@ -161,6 +166,27 @@ section {
 /* Prévia das minhas habilidades dentro de .aboutMe */
 .skillsPreview .icon {
   color: var(--dark_purple);
+}
+
+/* Configurações de hover do ícone de HTML */
+#htmlIcon:hover{
+  color: var(--html_orange);
+}
+
+#cssIcon:hover{
+  color: var(--purple);
+}
+
+#jsIcon:hover{
+  color: var(--js_yellow);
+}
+
+#nodeIcon:hover{
+  color: var(--node_green);
+}
+
+#pyIcon:hover{
+  color: var(--py_blue);
 }
 
 /* Configurações do texto de ano */
@@ -192,7 +218,7 @@ h1 {
 /* Configurações da foto de perfil*/
 .profilePhoto {
   aspect-ratio: 1 / 1;
-  height: 25rem;
+  height: 30rem;
   object-fit: cover;
   border: 1px solid grey;
   border-radius: 1rem;
@@ -297,7 +323,7 @@ h1 {
 }
 
 /* Configurações do texto da seção de habilidades */
-section > p {
+section>p {
   text-align: center;
 }
 
@@ -585,7 +611,8 @@ section > p {
 }
 
 /* Configurações dos ícones dos links */
-#extracurricular .findHere .icon, #extracurricular h2 {
+#extracurricular .findHere .icon,
+#extracurricular h2 {
   color: var(--dark_blue);
 }
 
@@ -623,12 +650,13 @@ section > p {
 /* A partir daqui contém as configurações da despedida */
 
 /* Configurações da seção de despedida */
-#farewell{
+#farewell {
   background-color: var(--dark_blue);
 }
 
 /* Configurações dos textos da seção */
-#farewell h2, #farewell p{
+#farewell h2,
+#farewell p {
   color: var(--white);
 }
 
@@ -643,6 +671,16 @@ section > p {
   }
 }
 
+/* Para dispositivos de até 1400px */
+@media (max-width: 1400px) {
+
+  /* Configurações de p dentro de .aboutMe */
+  .aboutMe p {
+    width: 100%;
+  }
+}
+
+/* Para dispositivos de até 1300px */
 @media (max-width: 1300px) {
 
   /* Configurações da grade de habilidades */
@@ -654,19 +692,25 @@ section > p {
 /* Para dispositivos de até 1200px */
 @media (max-width: 1200px) {
 
-  /* Configurações de p dentro de .aboutMe */
-  .aboutMe p {
-    width: 100%;
+  /* Configurações da foto de perfil*/
+  .profilePhoto {
+    height: 25rem;
+    width: 25rem;
+  }
+
+  /* Configurações de h2 dentro de .aboutMe */
+  .aboutMe h2 {
+    font-size: 18px;
+  }
+
+  /* Configurações de h1 dentro de .aboutMe */
+  .aboutMe h1 {
+    font-size: 30px;
   }
 }
 
 /* Para dispositivos de até 1100px */
 @media (max-width: 1100px) {
-
-  /* Configurações da foto de perfil*/
-  .profilePhoto {
-    width: 25rem;
-  }
 
   /* Div que abriga os cards */
   #experiences>div,
@@ -761,6 +805,39 @@ section > p {
   #culturePillar>div {
     width: 100%;
   }
+
+  /* Configurações de nav dentro de Header */
+  .hideMenu {
+    position: absolute;
+    z-index: 10;
+    top: 5rem;
+    left: 0;
+    background-color: var(--dark_blue);
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 0;
+    justify-content: flex-start;
+    display: none;
+  }
+
+  /* Configurações dos links dentro de NAV */
+  .hideMenu a {
+    justify-content: center;
+    border-radius: 0;
+    padding: 2rem 0;
+  }
+
+  /* Configurações do botão de menu hamburguer */
+  #hamburgerMenuButton {
+    display: flex;
+  }
+
+  /* Configurações de header */
+  header {
+    justify-content: flex-end !important;
+    align-items: center;
+  }
 }
 
 /* Para dispositivos de até 700px */
@@ -787,19 +864,9 @@ section > p {
 @media (max-width: 650px) {
 
   /* Configurações do cabeçalho */
-  header {
+  /* header {
     align-items: center;
-  }
-
-  /* Configurações de nav */
-  .hideMenu {
-    display: none;
-  }
-
-  /* Configurações do botão de menu hamburguer */
-  #hamburgerMenuButton {
-    display: flex;
-  }
+  } */
 
   /* Configurações do header para mobile */
   .mobileHeader {
@@ -859,6 +926,17 @@ section > p {
   /* Configurações da foto de perfil*/
   .profilePhoto {
     width: 100%;
+  }
+
+  /* Configurações da div de habilidades */
+  .skill {
+    padding: 1rem 0.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill .icon {
+    transform: scale(80%);
   }
 
 }
