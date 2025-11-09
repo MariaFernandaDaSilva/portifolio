@@ -169,23 +169,27 @@ section {
 }
 
 /* Configurações de hover do ícone de HTML */
-#htmlIcon:hover{
+#htmlIcon:hover {
   color: var(--html_orange);
 }
 
-#cssIcon:hover{
+/* Configurações de hover do ícone de CSS */
+#cssIcon:hover {
   color: var(--purple);
 }
 
-#jsIcon:hover{
+/* Configurações de hover do ícone de JS */
+#jsIcon:hover {
   color: var(--js_yellow);
 }
 
-#nodeIcon:hover{
+/* Configurações de hover do ícone de Node.js */
+#nodeIcon:hover {
   color: var(--node_green);
 }
 
-#pyIcon:hover{
+/* Configurações de hover do ícone de python */
+#pyIcon:hover {
   color: var(--py_blue);
 }
 
@@ -808,7 +812,9 @@ section>p {
 
   /* Configurações de nav dentro de Header */
   .hideMenu {
-    position: absolute;
+    position: fixed;
+    inset: 0;
+
     z-index: 10;
     top: 5rem;
     left: 0;
@@ -818,14 +824,36 @@ section>p {
     height: 100%;
     gap: 0;
     justify-content: flex-start;
-    display: none;
+
+    display: flex;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
+
+  /* Configurações do Menu quando estiver ativo */
+  .hideMenu.ativo {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    opacity: 1;
+  }
+
 
   /* Configurações dos links dentro de NAV */
   .hideMenu a {
     justify-content: center;
     border-radius: 0;
     padding: 2rem 0;
+  }
+
+  /* Configuração para o menu não */
+  .no-scroll {
+    overflow: hidden;
+    height: 100vh;
   }
 
   /* Configurações do botão de menu hamburguer */
