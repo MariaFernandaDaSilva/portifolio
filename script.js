@@ -67,12 +67,8 @@ controller.setLevel("htmlSkill", 80);
 controller.setLevel("cssSkill", 80);
 controller.setLevel("jsSkill", 45);
 controller.setLevel("nodeSkill", 30);
-controller.setLevel("reactSkill", 30);
 controller.setLevel("pySkill", 40);
-controller.setLevel("javaSkill", 25);
 controller.setLevel("sqlSkill", 75);
-controller.setLevel("excelSkill", 35);
-controller.setLevel("wordSkill", 75);
 controller.setLevel("pbiSkill", 35);
 controller.setLevel("englishSkill", 60);
 
